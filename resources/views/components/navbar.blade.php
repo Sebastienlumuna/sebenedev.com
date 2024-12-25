@@ -10,8 +10,8 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Ma maison<br></a></li>
-          <li><a href="about.html">Qui suis-je</a></li>
+          <li><a href="{{ route('home')}}" class="@if (request()->is('/')) active @endif">Ma maison<br></a></li>
+          <li><a href="{{ route('about')}}" class="@if (request()->is('/about')) active @endif">Qui suis-je</a></li>
           <li><a href="services.html">Services</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -19,7 +19,6 @@
 
       <div class="header-social-links">
         <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="github"><i class="bi bi-github"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
