@@ -31,14 +31,14 @@
                                     <div class="border-0 shadow-lg h-100 hover-shadow">
                                         <div class="product-info p-2">
                                         <div class="card-body">
-                                            <h3 class="product-title fw-bolder">
-                                            <a href="show.html" class="text-white text-decoration-none hover-text" st>
+                                            <h3 class="project-title fw-bolder">
+                                            <a href="show.html" class="text-white text-decoration-none hover-text fw-bold">
                                                 La journée mondiale des pays
                                             </a>
                                             </h3>
                                             <a href="show.html">
-                                            <p class="text-white">
-                                                e Ruphine Luyeye avec tout son comité de gestion ainsi que les étudiants de cette Alma-mater ont représenté la RDC à la journée mondiale des pays ...
+                                            <p>
+                                            Ruphine Luyeye avec tout son comité de gestion ainsi que les étudiants de cette Alma-mater ont représenté la RDC à la journée mondiale des pays ...
                                             </p>
                                             <p class="text-white">
                                                 Language : VueJS Laravel
