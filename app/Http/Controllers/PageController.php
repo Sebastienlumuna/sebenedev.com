@@ -11,10 +11,18 @@ class PageController extends Controller
     public function index(): View
     {
         $projects = Project::orderBy('created_at', 'desc')
-        ->paginate(3);
+        ->paginate(10);
 
         return view('pages.home',[
             'projects' => $projects
+        ]);
+    }
+
+    public function show(Project $project): View
+    {
+        return view('pages.show',[
+            
+            'project' => $project
         ]);
     }
 
