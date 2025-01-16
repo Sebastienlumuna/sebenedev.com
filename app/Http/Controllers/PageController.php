@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function index(): View
     {
-        $projects = Project::orderBy('created_at', 'desc')
+        $projects = Project::with('commentaires')->orderBy('created_at', 'desc')
         ->paginate(10);
 
         return view('pages.home',[
