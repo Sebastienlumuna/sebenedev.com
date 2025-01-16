@@ -17,10 +17,15 @@ class Commentaire extends Model
         'project_id'
     ];
 
-    protected $guarded = [
+   /* protected $guarded = [
         'id',
         'ceated_at',
         'updated_at',
+    ];
+    */
+
+    protected $with = [
+        'project',
     ];
 
     public function project(): BelongsTo
