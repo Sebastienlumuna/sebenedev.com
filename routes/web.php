@@ -19,4 +19,5 @@ Route::controller(PageController::class)->group(function () {
     Route::post('/Project/{project}/commentaire', 'commentaire')->name('commentaire');
     Route::get('/', 'index')->name('home');
     Route::get('/about', 'about')->name('about');
+    Route::get('/qui suis-je', 'porfolio')->name('porfolio');
 });

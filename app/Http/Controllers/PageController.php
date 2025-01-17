@@ -53,4 +53,9 @@ class PageController extends Controller
     {
         return view('pages.about');
     }
+
+    public function porfolio():view
+    {
+        return view('pages.porfolio');
+    }
 }

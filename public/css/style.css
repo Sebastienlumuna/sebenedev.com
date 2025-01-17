@@ -113,7 +113,13 @@ h6 {
 
 }
 
-
+.about-content{
+    text-align: justify; /* Justifie le texte */
+    margin: 0 auto; /* Centre le bloc */
+    max-width: 800px; /* Largeur maximale du texte */
+    padding: 20px; /* Espacement autour */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
