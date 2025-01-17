@@ -41,23 +41,31 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8 col-md-10">
                     <h3 class="text-center mb-4">Commentaires</h3>
-
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>  
+                    @endif                    @if ($project->commentaires->isEmpty())
+                        <p class="text-center">Aucun commentaire pour le moment.</p>
+                    @else
                     @foreach ($project->commentaires as $commentaire)
- <!-- Comments List -->
-                            <div class="comments-list mb-5">
-                                <div class="comment-item mb-3 p-3 border rounded">
-                                    <h5 class="comment-author"> {{ $commentaire->name }} </h5>
-                                    <p class="comment-content mb-0"> {{ $commentaire->content }} </p>
-                                    <small class="text-muted"> @formatdate( $commentaire->created_at ) </small>
-                                </div>
-                            </div>
-                    @endforeach
-                   
+                    <!-- Comments List -->
+                                               <div class="comments-list mb-5">
+                                                   <div class="comment-item mb-3 p-3 border rounded">
+                                                       <h5 class="comment-author"> {{ $commentaire->name }} </h5>
+                                                       <p class="comment-content mb-0"> {{ $commentaire->content }} </p>
+                                                       <small class="text-white"> @formatdate( $commentaire->created_at ) </small>
+                                                   </div>
+                                               </div>
+                                       @endforeach
+
+                    @endif
+                  
 
                     <!-- Comment Form -->
                     <div class="comment-form">
                         <h4 class="text-center mb-3">Ajouter un commentaire</h4>
-                        <form action="" method="POST">
+                        <form action="{{ route('commentaire', ['project'=>$project]) }}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nom</label>

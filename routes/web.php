@@ -16,6 +16,7 @@ use App\Http\Controllers\PageController;
 
 Route::controller(PageController::class)->group(function () {
     Route::get('/Project/{project}', 'show')->name('show');
+    Route::post('/Project/{project}/commentaire', 'commentaire')->name('commentaire');
     Route::get('/', 'index')->name('home');
     Route::get('/about', 'about')->name('about');
 });

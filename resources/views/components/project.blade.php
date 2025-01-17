@@ -27,7 +27,7 @@
                                 <div class="d-flex justify-content-between mb-2">
                                     <small class="text-white">📅 @formatdate($project->created_at) </small>
                                     <a href="">
-                                        <small class="text-white"><i class="bi bi-chat"></i>10</small>
+                                        <small class="text-white"><i class="bi bi-chat"></i> {{ $project->commentaires_count }} </small>
                                     </a>
                                 </div>
                             </div>
